@@ -8,14 +8,14 @@ type Props = {
 
 export const HomeTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ height: "100vh" }}>
       {/*
         <Header style={{ padding: 0, height: 50 }}>
           place for header module
         </Header>
       */}
 
-      <Content style={{ overflow: "auto" }}>
+      <Content style={{ overflow: "auto"}}>
         <HomeContentModule {...props.homeContentModuleProps} />
       </Content>
 
