@@ -15,6 +15,7 @@ export const HomeContainer = () => {
           { value: 90, label: "PROJECTS DONE", metric: "+" },
         ],
         intro: { texts: ["HELLO THERE!", "I'M CHRISTINA GRAY"] },
+        heading: { text: 'ABOUT ME'}
       },
     },
   };

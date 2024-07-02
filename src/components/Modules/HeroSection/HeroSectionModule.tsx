@@ -1,6 +1,7 @@
 import { Image } from "antd";
 import React from "react";
 import CredentialAtom from "~/components/Atoms/CredentialAtom/CredentialAtom";
+import SectionHeadingTextAtom from "~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom";
 import SkillTagAtom from "~/components/Atoms/SVGAtom/SkillTagAtom/SkillTagAtom";
 import TypingText from "~/components/TypingText/TypingText";
 
@@ -8,6 +9,7 @@ type Props = {
   skills: React.ComponentProps<typeof SkillTagAtom>[];
   credentials: React.ComponentProps<typeof CredentialAtom>[];
   intro: React.ComponentProps<typeof TypingText>;
+  heading: React.ComponentProps<typeof SectionHeadingTextAtom>
 };
 
 export default function HeroSectionModule(props: Props) {
@@ -24,14 +26,7 @@ export default function HeroSectionModule(props: Props) {
           <TypingText {...props.intro} />
         </div>
         <div className='flex w-full flex-col gap-4'>
-          <div className='relative'>
-            <h1 className='font-outline-2 text-5xl font-bold text-white opacity-10'>
-              ABOUT ME
-            </h1>
-            <p className='absolute bottom-0 left-1 font-medium'>
-              {"// ABOUT ME"}
-            </p>
-          </div>
+          <SectionHeadingTextAtom text={props.heading.text} />
           <div className='text-[40px] font-bold'>
             <h2>UI & UX Designer.</h2>
             <h2 className='-mt-2'>Photographer</h2>
