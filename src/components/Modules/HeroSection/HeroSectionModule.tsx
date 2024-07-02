@@ -14,7 +14,7 @@ type Props = {
 
 export default function HeroSectionModule(props: Props) {
   return (
-    <div className='col-span-3 rounded-2xl bg-white p-12 shadow'>
+    <div className='col-span-3 rounded-2xl bg-white p-12 shadow h-fit'>
       <div className='relative flex w-full gap-12'>
         <Image
           src='/images/hero-avatar.webp'
