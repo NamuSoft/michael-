@@ -1,0 +1,24 @@
+import React from 'react'
+import type PortfolioAtom from '~/components/Atoms/PorfolioAtom/PortfolioAtom';
+import PortfolioFilterButton from '~/components/Atoms/PortfolioFilterButton/PortfolioFilterButton';
+
+export interface PortfolioFilterProps {
+  filters: string[];
+  currentFilter: string;
+  setCurrentFilter: (filter: string) => void;
+}
+
+type Props = {
+  portfolios: React.ComponentProps<typeof PortfolioAtom>[];
+  portfolioFilters: PortfolioFilterProps;
+};
+
+export default function PortfolioModule(props: Props) {
+  return (
+    <div>
+      <div className="flex">
+        {props.portfolioFilters.filters.map((filter, index) => (<PortfolioFilterButton key={index} { ...props.portfolioFilters } index={index} />))}
+      </div>
+    </div>
+  )
+}
