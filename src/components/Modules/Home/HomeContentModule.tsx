@@ -1,16 +1,10 @@
 import { Image } from "antd";
 import React from "react";
+import SkillTagAtom from "~/components/Atoms/SVGAtom/SkillTagAtom/SkillTagAtom";
 import Sidebar from "~/components/SideBar.tsx/Sidebar";
-import SkillTag from "~/components/SkillTag/SkillTag";
-
-export type Skill = {
-  name: string;
-  level: number;
-  icon: "html5" | "bootstrap" | "search";
-};
 
 type Props = {
-  skills: Skill[];
+  skills: React.ComponentProps<typeof SkillTagAtom>[];
 };
 
 export const HomeContentModule = (props: Props) => {
@@ -47,13 +41,22 @@ export const HomeContentModule = (props: Props) => {
               </div>
               <div className='flex items-center justify-between'>
                 {props.skills.map((skill, index) => (
-                  <SkillTag key={index} {...skill} />
+                  <SkillTagAtom key={index} {...skill} />
                 ))}
               </div>
               <p className="text-[#838485] text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>
+            </div>
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h1 className="text-[56px] font-bold font-roboto text-white font-outline-2">12</h1>
+              <div>
+                <p className="text-2xl font-bold">+</p>
+                <p>Years of Experience</p>
+              </div>
             </div>
           </div>
         </div>
