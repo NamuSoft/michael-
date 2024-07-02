@@ -6,7 +6,12 @@ export const HomeContainer = () => {
       skills: [
         { name: "HTML5 & CSS3", level: 94, icon: "html5" },
         { name: "Bootstrap", level: 98, icon: "bootstrap" },
-        { name: "SEO", level: 75, icon: "search" }
+        { name: "SEO", level: 75, icon: "search" },
+      ],
+      credentials: [
+        { value: 12, label: "YEARS OF EXPERIENCE", metric: "+" },
+        { value: 20, label: "HOURS OF WORKING", metric: "k" },
+        { value: 90, label: "PROJECTS DONE", metric: "+" },
       ],
     },
   };

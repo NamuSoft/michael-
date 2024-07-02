@@ -1,6 +1,6 @@
 import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
 import { Layout } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
 
 type Props = {
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
