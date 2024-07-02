@@ -3,7 +3,7 @@ import { Layout } from "antd";
 import { Content } from "antd/es/layout/layout";
 
 type Props = {
-  homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
+    homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -15,8 +15,8 @@ export const HomeTemplate = (props: Props) => {
         </Header>
       */}
 
-      <Content style={{ overflow: "auto"}}>
-        <HomeContentModule {...props.homeContentModuleProps} />
+      <Content style={{ overflow: "auto" }}>
+        <HomeContentModule {...props.homeContentModuleProps } />
       </Content>
 
       {/*

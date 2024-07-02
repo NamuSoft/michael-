@@ -7,24 +7,21 @@ import TypingText from "~/components/TypingText/TypingText";
 type Props = {
   skills: React.ComponentProps<typeof SkillTagAtom>[];
   credentials: React.ComponentProps<typeof CredentialAtom>[];
-};
-
-const intro = {
-  texts: ["HI THERE!", "I'M CHRISTINA"],
+  intro: React.ComponentProps<typeof TypingText>;
 };
 
 export default function HeroSectionModule(props: Props) {
   return (
     <div className='col-span-3 rounded-2xl bg-white p-12 shadow'>
-      <div className='flex w-full gap-12'>
+      <div className='relative flex w-full gap-12'>
         <Image
           src='/images/hero-avatar.webp'
           alt='Hero Avatar'
           preview={false}
-          className='relative h-64 min-w-64 rounded-full'
+          className='h-64 min-w-64 rounded-full'
         />
-        <div className="absolute">
-          <TypingText texts={["HI THERE!", "I'M CHRISTINA"]} />
+        <div className='absolute bottom-16'>
+          <TypingText {...props.intro} />
         </div>
         <div className='flex w-full flex-col gap-4'>
           <div className='relative'>

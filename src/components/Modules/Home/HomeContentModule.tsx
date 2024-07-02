@@ -1,13 +1,10 @@
-import React from "react";
-import type CredentialAtom from "~/components/Atoms/CredentialAtom/CredentialAtom";
-import type SkillTagAtom from "~/components/Atoms/SVGAtom/SkillTagAtom/SkillTagAtom";
 import Sidebar from "~/components/SideBar.tsx/Sidebar";
 import HeroSectionModule from "../HeroSection/HeroSectionModule";
 
+
 type Props = {
-  skills: React.ComponentProps<typeof SkillTagAtom>[],
-  credentials: React.ComponentProps<typeof CredentialAtom>[],
-};
+  heroSectionModuleProps: React.ComponentProps<typeof HeroSectionModule>
+}
 
 export const HomeContentModule = (props: Props) => {
   return (
@@ -20,7 +17,7 @@ export const HomeContentModule = (props: Props) => {
         <div className='col-span-1'>
           <Sidebar />
         </div>
-        <HeroSectionModule {...props } />
+        <HeroSectionModule {...props.heroSectionModuleProps } />
       </div>
     </div>
   );

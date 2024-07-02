@@ -29,9 +29,9 @@ const TypingText = (props: Props) => {
           clearInterval(typingInterval);
         } else if (index > currentText.length) {
           clearInterval(typingInterval);
-          setTimeout(() => setIsDeleting(true), 500); // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 1000);
         }
-      }, 100);
+      }, 50);
     };
 
     typeText();
@@ -40,8 +40,9 @@ const TypingText = (props: Props) => {
   }, [currentText, isDeleting]);
 
   return (
-    <div className='typing-text font-roboto bg-black text-[56px] font-bold text-white'>
-      {displayedText}_
+    <div className='typing-text rounded-full bg-black bg-opacity-40 px-4 py-2 font-roboto text-sm text-white backdrop-blur'>
+      {displayedText}
+      <span className='animate-pulse'>_</span>
     </div>
   );
 };
