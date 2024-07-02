@@ -7,6 +7,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        roboto: ["Roboto Mono", "monospace"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

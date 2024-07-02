@@ -1,14 +1,14 @@
 import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
 import { Layout } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
 
 type Props = {
-  homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
+    homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
   return (
-    <Layout style={{ height: "100%" }}>
+    <Layout style={{ height: "100vh" }}>
       {/*
         <Header style={{ padding: 0, height: 50 }}>
           place for header module
@@ -16,7 +16,7 @@ export const HomeTemplate = (props: Props) => {
       */}
 
       <Content style={{ overflow: "auto" }}>
-        <HomeContentModule {...props.homeContentModuleProps} />
+        <HomeContentModule {...props.homeContentModuleProps } />
       </Content>
 
       {/*
