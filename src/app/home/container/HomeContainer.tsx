@@ -56,6 +56,41 @@ export const HomeContainer = () => {
         },
       },
     },
+    servicesSectionModuleProps: {
+      heading: { text: "SERVICES" },
+      service: {
+        services: [
+          {
+            index: "01",
+            icon: "code",
+            title: "WEB & MOBILE DEVELOPMENT",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          },
+          {
+            index: "02",
+            icon: "laptop",
+            title: "DIGITAL MARKETING",
+            description:
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+          },
+          {
+            index: "03",
+            icon: "setting",
+            title: "BRANDING & STRATEGY",
+            description:
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat",
+          },
+          {
+            index: "04",
+            icon: "user",
+            title: "USER TESTING & PERSONAS",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          },
+        ],
+      },
+    },
   };
 
   return <HomeTemplate {...homeTemplateProps} />;

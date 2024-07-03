@@ -3,12 +3,14 @@ import { Content } from "antd/es/layout/layout";
 import PortfolioSectionModule from "~/components/Modules/PorfolioSection/PortfolioSectionModule";
 import Sidebar from "../SideBar.tsx/Sidebar";
 import AboutSectionModule from "~/components/Modules/AboutSection/AboutSectionModule";
+import ServicesSectionModule from "~/components/Modules/ServicesModule/ServicesSectionModule";
 
 type Props = {
   aboutSectionModuleProps: React.ComponentProps<typeof AboutSectionModule>;
   portfolioSectionModuleProps: React.ComponentProps<
     typeof PortfolioSectionModule
   >;
+  servicesSectionModuleProps: React.ComponentProps<typeof ServicesSectionModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -33,6 +35,8 @@ export const HomeTemplate = (props: Props) => {
             <AboutSectionModule {...props.aboutSectionModuleProps} />
             <div className='col-span-1'></div>
             <PortfolioSectionModule {...props.portfolioSectionModuleProps} />
+            <div className='col-span-1'></div>
+            <ServicesSectionModule { ...props.servicesSectionModuleProps } />
           </div>
         </div>
         {/* <HomeContentModule {...props.homeContentModuleProps } /> */}
