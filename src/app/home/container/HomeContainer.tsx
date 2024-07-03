@@ -1,10 +1,7 @@
 import { useState } from "react";
-import { useState } from "react";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
 export const HomeContainer = () => {
-  const [ currentFilter, setCurrentFilter ] = useState<string>("Show All");
-
   const [ currentFilter, setCurrentFilter ] = useState<string>("Show All");
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
