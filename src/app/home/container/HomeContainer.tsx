@@ -93,6 +93,9 @@ export const HomeContainer = () => {
     },
     testimonialSectionModuleProps: {
       heading: { text: "WHAT PEOPLE SAY", bgText: "TESTIMONIAL" },
+      // navigation: {
+
+      // }
     },
   };
 
