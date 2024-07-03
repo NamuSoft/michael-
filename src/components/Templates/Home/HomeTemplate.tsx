@@ -1,16 +1,21 @@
 import { Layout } from "antd";
 import { Content } from "antd/es/layout/layout";
-import PortfolioSectionModule from "~/components/Modules/PorfolioSection/PortfolioSectionModule";
+import PortfolioSectionModule from "~/components/Modules/PorfolioModule/PortfolioSectionModule";
 import Sidebar from "../SideBar.tsx/Sidebar";
-import AboutSectionModule from "~/components/Modules/AboutSection/AboutSectionModule";
+import AboutSectionModule from "~/components/Modules/AboutModule/AboutSectionModule";
 import ServicesSectionModule from "~/components/Modules/ServicesModule/ServicesSectionModule";
+import TestimonialSectionModule from "~/components/Modules/TestimonialModule/TestimonialSectionModule";
+import React from "react";
 
 type Props = {
   aboutSectionModuleProps: React.ComponentProps<typeof AboutSectionModule>;
   portfolioSectionModuleProps: React.ComponentProps<
     typeof PortfolioSectionModule
   >;
-  servicesSectionModuleProps: React.ComponentProps<typeof ServicesSectionModule>;
+  servicesSectionModuleProps: React.ComponentProps<
+    typeof ServicesSectionModule
+  >;
+  testimonialSectionModuleProps: React.ComponentProps<typeof TestimonialSectionModule>
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -36,7 +41,9 @@ export const HomeTemplate = (props: Props) => {
             <div className='col-span-1'></div>
             <PortfolioSectionModule {...props.portfolioSectionModuleProps} />
             <div className='col-span-1'></div>
-            <ServicesSectionModule { ...props.servicesSectionModuleProps } />
+            <ServicesSectionModule {...props.servicesSectionModuleProps} />
+            <div className='col-span-1'></div>
+            <TestimonialSectionModule {...props.testimonialSectionModuleProps} />
           </div>
         </div>
         {/* <HomeContentModule {...props.homeContentModuleProps } /> */}
