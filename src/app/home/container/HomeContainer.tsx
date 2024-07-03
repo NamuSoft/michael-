@@ -48,7 +48,10 @@ export const HomeContainer = () => {
           portfolioFilters: {
             filters: ["Show All", "Branding", "Mockup"],
             currentFilter,
-            setCurrentFilter
+            setCurrentFilter: (filter: string) => {
+              console.log(filter);
+              setCurrentFilter(filter);
+            }
           },
         },
       },

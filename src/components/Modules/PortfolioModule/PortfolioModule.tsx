@@ -1,5 +1,5 @@
 import React from 'react'
-import type PortfolioAtom from '~/components/Atoms/PorfolioAtom/PortfolioAtom';
+import PortfolioAtom from '~/components/Atoms/PorfolioAtom/PortfolioAtom';
 import PortfolioFilterButton from '~/components/Atoms/PortfolioFilterButton/PortfolioFilterButton';
 
 export interface PortfolioFilterProps {
@@ -16,9 +16,10 @@ type Props = {
 export default function PortfolioModule(props: Props) {
   return (
     <div>
-      <div className="flex">
+      <div className="flex gap-2">
         {props.portfolioFilters.filters.map((filter, index) => (<PortfolioFilterButton key={index} { ...props.portfolioFilters } index={index} />))}
       </div>
+      <div className="grid grid-cols-2 gap-6 mt-6">{props.portfolios.map((filter, index) => (<PortfolioAtom key={index} {...filter} />))}</div>
     </div>
   )
 }
