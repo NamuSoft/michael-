@@ -13,7 +13,7 @@ type Props = {
   portfolioFilters: PortfolioFilterProps;
 };
 
-export default function PortfolioModule(props: Props) {
+export default function PortfolioRender(props: Props) {
   return (
     <div>
       <div className="flex gap-2">
