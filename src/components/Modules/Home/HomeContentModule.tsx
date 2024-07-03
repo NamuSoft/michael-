@@ -1,13 +1,14 @@
 import Sidebar from "~/components/Templates/SideBar.tsx/Sidebar";
-import HeroSectionModule from "../HeroSection/HeroSectionModule";
+import HeroSectionModule from "../AboutSection/AboutSectionModule";
 import React from "react";
 import PortfolioSectionModule from "../PorfolioSection/PortfolioSectionModule";
 
-
 type Props = {
-  heroSectionModuleProps: React.ComponentProps<typeof HeroSectionModule>,
-  portfolioSectionModuleProps: React.ComponentProps<typeof PortfolioSectionModule>
-}
+  heroSectionModuleProps: React.ComponentProps<typeof HeroSectionModule>;
+  portfolioSectionModuleProps: React.ComponentProps<
+    typeof PortfolioSectionModule
+  >;
+};
 
 export const HomeContentModule = (props: Props) => {
   return (
@@ -20,8 +21,8 @@ export const HomeContentModule = (props: Props) => {
         <div className='col-span-1'>
           <Sidebar />
         </div>
-        <HeroSectionModule {...props.heroSectionModuleProps } />
-        <div className="col-span-1"></div>
+        <HeroSectionModule {...props.heroSectionModuleProps} />
+        <div className='col-span-1'></div>
         <PortfolioSectionModule {...props.portfolioSectionModuleProps} />
       </div>
     </div>

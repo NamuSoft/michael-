@@ -12,7 +12,7 @@ type Props = {
   heading: React.ComponentProps<typeof SectionHeadingTextAtom>;
 };
 
-export default function HeroSectionModule(props: Props) {
+export default function AboutSectionModule(props: Props) {
   return (
     <div className='col-span-3 h-fit rounded-2xl bg-white p-12 shadow'>
       <div className='relative flex w-full gap-12'>
