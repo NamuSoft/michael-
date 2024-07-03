@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import TestimonialCard from "../TestimonialCard/TestimonialCard";
 
 type Props = {
@@ -6,6 +5,7 @@ type Props = {
   currentTestimonial: number,
 };
 
+// TODO - Add scroll animation
 export default function TestimonialRender(props: Props) {
   return (
     <div className='grid grid-cols-2 items-center'>
