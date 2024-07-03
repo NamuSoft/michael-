@@ -3,6 +3,7 @@ import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 
 export const HomeContainer = () => {
   const [currentFilter, setCurrentFilter] = useState<string>("Show All");
+  const [currentTestimonial, setCurrentTestimonial] = useState<number>(0);
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     aboutSectionModuleProps: {
@@ -89,6 +90,56 @@ export const HomeContainer = () => {
               "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
           },
         ],
+      },
+    },
+    testimonialSectionModuleProps: {
+      heading: { text: "WHAT PEOPLE SAY", bgText: "TESTIMONIAL" },
+      testimonial: {
+        testimonials: [
+          {
+            message:
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            rating: 5,
+            user: {
+              name: "Richart Styers",
+              role: "CTO - FlaTheme",
+              avatar: "richart.webp",
+            },
+          },
+          {
+            message:
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            rating: 5,
+            user: {
+              name: "Sandra Radford",
+              role: "Project Manager",
+              avatar: "sandra.webp",
+            },
+          },
+          {
+            message:
+              "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            rating: 5,
+            user: {
+              name: "Donald Ang",
+              role: "Developer",
+              avatar: "donald.webp",
+            },
+          },
+        ],
+        currentTestimonial,
+      },
+      onNavigateBackward: () => {
+        if (currentTestimonial > 0)
+          setCurrentTestimonial(currentTestimonial - 1);
+      },
+      onNavigateForward: () => {
+        if (
+          currentTestimonial <
+          homeTemplateProps.testimonialSectionModuleProps.testimonial
+            .testimonials.length
+        )
+          setCurrentTestimonial(currentTestimonial + 1);
       },
     },
   };

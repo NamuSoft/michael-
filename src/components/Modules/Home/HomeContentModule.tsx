@@ -1,7 +1,7 @@
 import Sidebar from "~/components/Templates/SideBar.tsx/Sidebar";
-import HeroSectionModule from "../AboutSection/AboutSectionModule";
+import HeroSectionModule from "../AboutModule/AboutSectionModule";
 import React from "react";
-import PortfolioSectionModule from "../PorfolioSection/PortfolioSectionModule";
+import PortfolioSectionModule from "../PorfolioModule/PortfolioSectionModule";
 
 type Props = {
   heroSectionModuleProps: React.ComponentProps<typeof HeroSectionModule>;
