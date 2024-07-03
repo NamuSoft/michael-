@@ -7,3 +7,5 @@ export { default as setting } from "./setting.svg";
 export { default as user } from "./user.svg";
 export { default as backwardArrow } from "./backwardArrow.svg";
 export { default as forwardArrow } from "./forwardArrow.svg";
+export { default as star } from "./star.svg";
+export { default as quotation } from "./quotation.svg";
