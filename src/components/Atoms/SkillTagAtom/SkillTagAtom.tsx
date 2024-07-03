@@ -4,7 +4,7 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 type Props = {
   name: string;
   level: number;
-  icon: "html5" | "bootstrap" | "search";
+  icon: React.ComponentProps<typeof SVGAtom>["iconName"];
 };
 
 export default function SkillTagAtom(props: Props) {

@@ -1,4 +1,4 @@
-import Sidebar from "~/components/SideBar.tsx/Sidebar";
+import Sidebar from "~/components/Templates/SideBar.tsx/Sidebar";
 import HeroSectionModule from "../HeroSection/HeroSectionModule";
 import React from "react";
 import PortfolioSectionModule from "../PorfolioSection/PortfolioSectionModule";

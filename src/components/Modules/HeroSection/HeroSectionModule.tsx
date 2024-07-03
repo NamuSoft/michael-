@@ -3,7 +3,7 @@ import React from "react";
 import CredentialAtom from "~/components/Atoms/CredentialAtom/CredentialAtom";
 import SectionHeadingTextAtom from "~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom";
 import SkillTagAtom from "~/components/Atoms/SkillTagAtom/SkillTagAtom";
-import TypingText from "~/components/TypingText/TypingText";
+import TypingText from "~/components/Components/TypingText/TypingText";
 
 type Props = {
   skills: React.ComponentProps<typeof SkillTagAtom>[];
