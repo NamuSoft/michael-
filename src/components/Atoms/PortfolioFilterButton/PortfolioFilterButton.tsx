@@ -1,12 +1,18 @@
-import React from 'react'
-import { type PortfolioFilterProps } from '~/components/Modules/PortfolioModule/PortfolioModule';
+import React from "react";
+import { type PortfolioFilterProps } from "~/components/Components/PortfolioRender/PortfolioRender";
 
 type Prop = PortfolioFilterProps & {
-  index: number,
-}
+  index: number;
+};
 
 export default function PortfolioFilterButton(props: Prop) {
-    const filter = props.filters[props.index];
-  return <button 
-    onClick={() => props.setCurrentFilter(filter ?? '')} className={`py-2 px-4 rounded-full font-roboto hover:bg-black hover:text-white ${props.currentFilter === filter ? 'bg-black text-white' : 'border border-black border-dashed'}`}>{filter}</button>;
+  const filter = props.filters[props.index];
+  return (
+    <button
+      onClick={() => props.setCurrentFilter(filter ?? "")}
+      className={`rounded-full px-4 py-2 font-roboto hover:bg-black hover:text-white ${props.currentFilter === filter ? "bg-black text-white" : "border border-dashed border-black"}`}
+    >
+      {filter}
+    </button>
+  );
 }

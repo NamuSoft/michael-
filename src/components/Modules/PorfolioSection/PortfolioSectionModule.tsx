@@ -1,11 +1,10 @@
 import React from "react";
 import SectionHeadingTextAtom from "~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom";
-import PortfolioModule from "../PortfolioModule/PortfolioModule";
-import PortfolioAtom from "~/components/Atoms/PorfolioAtom/PortfolioAtom";
+import PortfolioRender from "../../Components/PortfolioRender/PortfolioRender";
 
 type Props = {
   heading: React.ComponentProps<typeof SectionHeadingTextAtom>;
-  portfolio: React.ComponentProps<typeof PortfolioModule>;
+  portfolio: React.ComponentProps<typeof PortfolioRender>;
 };
 
 export default function PortfolioSectionModule(props: Props) {
@@ -24,7 +23,7 @@ export default function PortfolioSectionModule(props: Props) {
         </div>
       </div>
       <div className='mt-10'>
-        <PortfolioModule {...props.portfolio} />
+        <PortfolioRender {...props.portfolio} />
       </div>
     </div>
   );
