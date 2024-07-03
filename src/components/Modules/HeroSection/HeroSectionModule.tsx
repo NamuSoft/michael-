@@ -2,19 +2,19 @@ import { Image } from "antd";
 import React from "react";
 import CredentialAtom from "~/components/Atoms/CredentialAtom/CredentialAtom";
 import SectionHeadingTextAtom from "~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom";
-import SkillTagAtom from "~/components/Atoms/SVGAtom/SkillTagAtom/SkillTagAtom";
+import SkillTagAtom from "~/components/Atoms/SkillTagAtom/SkillTagAtom";
 import TypingText from "~/components/TypingText/TypingText";
 
 type Props = {
   skills: React.ComponentProps<typeof SkillTagAtom>[];
   credentials: React.ComponentProps<typeof CredentialAtom>[];
   intro: React.ComponentProps<typeof TypingText>;
-  heading: React.ComponentProps<typeof SectionHeadingTextAtom>
+  heading: React.ComponentProps<typeof SectionHeadingTextAtom>;
 };
 
 export default function HeroSectionModule(props: Props) {
   return (
-    <div className='col-span-3 rounded-2xl bg-white p-12 shadow h-fit'>
+    <div className='col-span-3 h-fit rounded-2xl bg-white p-12 shadow'>
       <div className='relative flex w-full gap-12'>
         <Image
           src='/images/hero-avatar.webp'

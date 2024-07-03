@@ -27,29 +27,28 @@ export const HomeContainer = () => {
             {
               name: "Glasses of Cocktail",
               image: "cocktail.webp",
-              type: "Branding",
+              type: "Branding" as const,
             },
             {
               name: "A Branch with Flowers",
               image: "branch.webp",
-              type: "Mockup",
+              type: "Mockup" as const,
             },
             {
               name: "Orange Rose Flower",
               image: "rose.webp",
-              type: "Mockup",
+              type: "Mockup" as const,
             },
             {
               name: "Green Plant on a Desk",
               image: "plant.webp",
-              type: "Branding",
+              type: "Branding" as const,
             },
-          ],
+          ].filter((portfolio) => portfolio.type === currentFilter || currentFilter === "Show All"),
           portfolioFilters: {
             filters: ["Show All", "Branding", "Mockup"],
             currentFilter,
             setCurrentFilter: (filter: string) => {
-              console.log(filter);
               setCurrentFilter(filter);
             }
           },
