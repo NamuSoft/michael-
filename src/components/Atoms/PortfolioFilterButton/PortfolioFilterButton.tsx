@@ -10,7 +10,7 @@ export default function PortfolioFilterButton(props: Prop) {
   return (
     <button
       onClick={() => props.setCurrentFilter(filter ?? "")}
-      className={`rounded-full px-4 py-2 font-roboto hover:bg-black hover:text-white ${props.currentFilter === filter ? "bg-black text-white" : "border border-dashed border-black"}`}
+      className={`rounded-full text-[12px] xs:text-sm px-4 py-2 font-roboto hover:bg-black hover:text-white ${props.currentFilter === filter ? "bg-black text-white" : "border border-dashed border-black"}`}
     >
       {filter}
     </button>

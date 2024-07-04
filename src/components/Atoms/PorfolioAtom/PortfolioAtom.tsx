@@ -8,7 +8,7 @@ type Props = {
 
 export default function PortfolioAtom(props: Props) {
   return (
-    <div className='group relative h-[420px] w-[420px] overflow-hidden rounded-lg'>
+    <div className='group relative h-[306px] xs:h-[361px] md:min-h-[420px] w-full overflow-hidden rounded-lg'>
       <div
         className='absolute inset-0 bg-cover bg-center transition-transform delay-100 duration-300 ease-in-out group-hover:scale-110'
         style={{ backgroundImage: `url('/images/portfolio/${props.image}')` }}
