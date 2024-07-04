@@ -15,7 +15,8 @@ type Props = {
   servicesSectionModuleProps: React.ComponentProps<
     typeof ServicesSectionModule
   >;
-  testimonialSectionModuleProps: React.ComponentProps<typeof TestimonialSectionModule>
+  testimonialSectionModuleProps: React.ComponentProps<typeof TestimonialSectionModule>;
+  sideBarComponentProps: React.ComponentProps<typeof Sidebar>;
 };
 
 export const HomeTemplate = (props: Props) => {
@@ -28,14 +29,14 @@ export const HomeTemplate = (props: Props) => {
       */}
 
       <Content style={{ overflow: "auto" }}>
-        <div className='mx-auto max-w-[1300px] py-6'>
-          <div className='mb-8 flex gap-4 text-7xl font-bold'>
+        <div id='about' className='mx-auto max-w-[1300px] px-3 py-6 md:px-0'>
+          <div className='mb-5 md:mb-8 flex gap-4 text-[40px] font-bold md:text-7xl'>
             <h1>Christina</h1>
             <h1 className='font-outline-2 text-white'>Gray</h1>
           </div>
-          <div className='grid grid-cols-4 gap-x-12 gap-y-6'>
+          <div className='grid-cols-4 gap-x-12 gap-y-6 md:grid'>
             <div className='col-span-1'>
-              <Sidebar />
+              <Sidebar {...props.sideBarComponentProps} />
             </div>
             <AboutSectionModule {...props.aboutSectionModuleProps} />
             <div className='col-span-1'></div>
@@ -43,7 +44,9 @@ export const HomeTemplate = (props: Props) => {
             <div className='col-span-1'></div>
             <ServicesSectionModule {...props.servicesSectionModuleProps} />
             <div className='col-span-1'></div>
-            <TestimonialSectionModule {...props.testimonialSectionModuleProps} />
+            <TestimonialSectionModule
+              {...props.testimonialSectionModuleProps}
+            />
           </div>
         </div>
         {/* <HomeContentModule {...props.homeContentModuleProps } /> */}

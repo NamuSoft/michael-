@@ -1,11 +1,56 @@
 import { useState } from "react";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export const HomeContainer = () => {
   const [currentFilter, setCurrentFilter] = useState<string>("Show All");
   const [currentTestimonial, setCurrentTestimonial] = useState<number>(0);
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const hash = searchParams.get('hash');
+
+  console.log(hash)
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
+    sideBarComponentProps: {
+      options: [
+        {
+          name: "ABOUT ME",
+          href: "#about",
+          active: pathname === "#about",
+        },
+        {
+          name: "PORTFOLIO",
+          href: "#portfolio",
+          active: pathname === "#portfolio",
+        },
+        {
+          name: "SERVICES",
+          href: "#services",
+          active: pathname === "#services",
+        },
+        {
+          name: "TESTIMONIAL",
+          href: "#testimonial",
+          active: pathname === "#testimonial",
+        },
+        {
+          name: "RESUME",
+          href: "#resume",
+          active: pathname === "#resume",
+        },
+        {
+          name: "BLOG",
+          href: "#blog",
+          active: pathname === "#blog",
+        },
+        {
+          name: "CONTACT",
+          href: "#contact",
+          active: pathname === "#contact",
+        },
+      ],
+    },
     aboutSectionModuleProps: {
       skills: [
         { name: "HTML5 & CSS3", level: 94, icon: "html5" },
@@ -137,7 +182,8 @@ export const HomeContainer = () => {
         if (
           currentTestimonial <
           homeTemplateProps.testimonialSectionModuleProps.testimonial
-            .testimonials.length
+            .testimonials.length -
+            1
         )
           setCurrentTestimonial(currentTestimonial + 1);
       },
