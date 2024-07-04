@@ -37,7 +37,7 @@ export const HomeTemplate = (props: Props) => {
           <div className=''>
             <Sidebar {...props.sideBarComponentProps} />
           </div>
-          <div className='grid-cols-4 gap-x-12 gap-y-6 md:grid mt-32 md:mt-0'>
+          <div className='grid-cols-4 gap-x-12 gap-y-3 md:gap-y-6 flex flex-col md:grid mt-32 md:mt-0'>
             <div className='col-span-1'></div>
             <AboutSectionModule {...props.aboutSectionModuleProps} />
             <div className='col-span-1'></div>
