@@ -1,15 +1,11 @@
 import { useState } from "react";
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export const HomeContainer = () => {
   const [currentFilter, setCurrentFilter] = useState<string>("Show All");
   const [currentTestimonial, setCurrentTestimonial] = useState<number>(0);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const hash = searchParams.get('hash');
-
-  console.log(hash)
 
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
     sideBarComponentProps: {
@@ -17,37 +13,37 @@ export const HomeContainer = () => {
         {
           name: "ABOUT ME",
           href: "#about",
-          active: pathname === "#about",
+          active: pathname === "/home#about",
         },
         {
           name: "PORTFOLIO",
           href: "#portfolio",
-          active: pathname === "#portfolio",
+          active: pathname === "/home#portfolio",
         },
         {
           name: "SERVICES",
           href: "#services",
-          active: pathname === "#services",
+          active: pathname === "/home#services",
         },
         {
           name: "TESTIMONIAL",
           href: "#testimonial",
-          active: pathname === "#testimonial",
+          active: pathname === "/home#testimonial",
         },
         {
           name: "RESUME",
           href: "#resume",
-          active: pathname === "#resume",
+          active: pathname === "/home#resume",
         },
         {
           name: "BLOG",
           href: "#blog",
-          active: pathname === "#blog",
+          active: pathname === "/home#blog",
         },
         {
           name: "CONTACT",
           href: "#contact",
-          active: pathname === "#contact",
+          active: pathname === "/home#contact",
         },
       ],
     },

@@ -14,8 +14,8 @@ type Props = {
 
 export default function AboutSectionModule(props: Props) {
   return (
-    <div className='col-span-3 h-fit rounded-2xl bg-white p-12 shadow'>
-      <div className='relative flex w-full gap-12'>
+    <div className='col-span-3 h-fit rounded-lg md:rounded-2xl bg-white p-12 shadow'>
+      <div className='relative md:flex w-full gap-12'>
         <Image
           src='/images/hero-avatar.webp'
           alt='Hero Avatar'
@@ -25,13 +25,13 @@ export default function AboutSectionModule(props: Props) {
         <div className='absolute bottom-16'>
           <TypingText {...props.intro} />
         </div>
-        <div className='flex w-full flex-col gap-4'>
+        <div className='md:flex w-full flex-col gap-4'>
           <SectionHeadingTextAtom text={props.heading.text} />
           <div className='text-[40px] font-bold'>
             <h2>UI & UX Designer.</h2>
             <h2 className='-mt-2'>Photographer</h2>
           </div>
-          <div className='flex items-center justify-between'>
+          <div className='md:flex items-center justify-between'>
             {props.skills.map((skill, index) => (
               <SkillTagAtom key={index} {...skill} />
             ))}

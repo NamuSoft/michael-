@@ -7,10 +7,12 @@ type Props = {
 
 export default function Sidebar(props: Props) {
   return (
-    <div className='fixed flex md:w-[300px] flex-row md:flex-col gap-7 rounded-lg w-11/12 items-center justify-center md:items-stretch md:rounded-xl bg-black px-10 py-3 md:py-7'>
-      {props.options.map((link, index) => (
-        <SideBarLinkAtom key={index} {...link} />
-      ))}
+    <div className='fixed top-[86px] z-[999] bg-[#f5f5f5] md:top-auto'>
+      <div className='flex w-11/12 flex-row items-center justify-center gap-7 rounded-lg bg-black px-10 py-3 md:w-[300px] md:flex-col md:items-stretch md:rounded-xl md:py-7'>
+        {props.options.map((link, index) => (
+          <SideBarLinkAtom key={index} {...link} />
+        ))}
+      </div>
     </div>
   );
 };
