@@ -9,7 +9,7 @@ type Props = {
 
 export default function PortfolioSectionModule(props: Props) {
   return (
-    <div className='col-span-3 rounded-2xl bg-white p-12 shadow'>
+    <div id="portfolio" className='col-span-3 rounded-2xl bg-white p-12 shadow'>
       <div className='relative flex w-full gap-12'>
         <div className='flex w-full flex-col gap-4'>
           <SectionHeadingTextAtom text={props.heading.text} />

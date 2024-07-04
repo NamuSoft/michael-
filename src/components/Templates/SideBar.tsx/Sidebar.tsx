@@ -1,20 +1,18 @@
-const Sidebar = () => {
+import React from "react";
+import SideBarLinkAtom from "~/components/Atoms/SideBarLink/SideBarLinkAtom";
+
+type Props = {
+  options: React.ComponentProps<typeof SideBarLinkAtom>[];
+}
+
+export default function Sidebar(props: Props) {
   return (
-    <div className='bg-black p-4 text-white'>
-      <ul className='space-y-6'>
-        <li className='cursor-pointer hover:text-gray-400'>ABOUT ME</li>
-        <li className='cursor-pointer hover:text-gray-400'>PORTFOLIO</li>
-        <li className='flex cursor-pointer items-center hover:text-gray-400'>
-          SERVICES
-          <div className='ml-2 h-2 w-2 rounded-full border-2 border-white'></div>
-        </li>
-        <li className='cursor-pointer hover:text-gray-400'>TESTIMONIAL</li>
-        <li className='cursor-pointer hover:text-gray-400'>RESUME</li>
-        <li className='cursor-pointer hover:text-gray-400'>BLOG</li>
-        <li className='cursor-pointer hover:text-gray-400'>CONTACT</li>
-      </ul>
+    <div className='fixed top-[86px] z-[999] bg-[#f5f5f5] md:top-auto'>
+      <div className='flex w-11/12 flex-row items-center justify-center gap-7 rounded-lg bg-black px-10 py-3 md:w-[300px] md:flex-col md:items-stretch md:rounded-xl md:py-7'>
+        {props.options.map((link, index) => (
+          <SideBarLinkAtom key={index} {...link} />
+        ))}
+      </div>
     </div>
   );
 };
-
-export default Sidebar;

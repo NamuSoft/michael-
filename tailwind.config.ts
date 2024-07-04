@@ -10,6 +10,9 @@ export default {
         roboto: ["Roboto Mono", "monospace"],
         poppins: ["Poppins", "sans-serif"],
       },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
+      },
     },
   },
   plugins: [],
