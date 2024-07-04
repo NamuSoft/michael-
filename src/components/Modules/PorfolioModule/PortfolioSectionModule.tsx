@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeadingTextAtom from "~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom";
 import PortfolioRender from "../../Components/PortfolioRender/PortfolioRender";
+import SectionWrapper from "~/components/Components/SectionWrapper/SectionWrapper";
 
 type Props = {
   heading: React.ComponentProps<typeof SectionHeadingTextAtom>;
@@ -9,7 +10,7 @@ type Props = {
 
 export default function PortfolioSectionModule(props: Props) {
   return (
-    <div id="portfolio" className='col-span-3 rounded-2xl bg-white p-12 shadow'>
+    <SectionWrapper id='portfolio'>
       <div className='relative flex w-full gap-12'>
         <div className='flex w-full flex-col gap-4'>
           <SectionHeadingTextAtom text={props.heading.text} />
@@ -25,6 +26,6 @@ export default function PortfolioSectionModule(props: Props) {
       <div className='mt-10'>
         <PortfolioRender {...props.portfolio} />
       </div>
-    </div>
+    </SectionWrapper>
   );
 }
