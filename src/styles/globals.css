@@ -19,4 +19,7 @@
   .remove-outline {
     -webkit-text-stroke: 0px;
   }
+  .section-h2 {
+    @apply text-[30px] font-bold md:text-[40px];
+  }
 }

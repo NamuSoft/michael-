@@ -30,7 +30,7 @@ export default function AboutSectionModule(props: Props) {
         </div>
         <div className='flex w-full flex-col gap-4'>
           <SectionHeadingTextAtom text={props.heading.text} />
-          <div className='text-[30px] font-bold md:text-[40px]'>
+          <div className='section-h2'>
             <h2>UI & UX Designer.</h2>
             <h2 className='-mt-2'>Photographer</h2>
           </div>

@@ -27,7 +27,7 @@ export const HomeTemplate = (props: Props) => {
           place for header module
         </Header>
       */}
-{/* 261407 */}
+
       <Content style={{ overflow: "auto", scrollBehavior: "smooth" }} className='relative'>
         <div id='about' className='mx-auto max-w-[1300px] px-3 py-6 md:px-0'>
           <div className='bg-[#f5f5f5] z-[999] -mt-6 pt-6 pb-2 w-full fixed mb-5 flex gap-4 text-[40px] font-bold md:static md:mb-8 md:text-7xl'>
