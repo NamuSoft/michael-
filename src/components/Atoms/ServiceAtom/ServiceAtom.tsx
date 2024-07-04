@@ -21,13 +21,13 @@ type Props = {
 
 export default function ServiceAtom(props: Props) {
   return (
-    <div className='grid grid-cols-7 items-center font-roboto py-7 border-b border-dashed last:border-none'>
-      <div className='col-span-3 flex items-center gap-6'>
-        <h1 className='font-outline-1 text-[54px] font-bold text-white'>
+    <div className='md:grid grid-cols-7 items-center font-roboto py-7 border-b border-dashed last:border-none'>
+      <div className='col-span-3 md:flex items-center gap-6'>
+        <h1 className='font-outline-1 text-[36px] md:text-[54px] font-bold text-white'>
           {props.index}
         </h1>
         <div className='flex flex-col gap-2'>
-          <SVGAtom iconName={props.icon} width={25.6} />
+          <SVGAtom iconName={props.icon} className='w-[24px] md:w-[25.6px]' />
           <p className='text-sm'>{props.title}</p>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function PortfolioSectionModule(props: Props) {
       <div className='relative flex w-full gap-12'>
         <div className='flex w-full flex-col gap-2 md:gap-4'>
           <SectionHeadingTextAtom text={props.heading.text} />
-          <div className='text-[30px] md:text-[40px] font-bold'>
+          <div className='section-h2'>
             <h2>My Latest Works</h2>
           </div>
           <p className='text-base text-[#838485]'>
