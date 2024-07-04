@@ -19,7 +19,7 @@ export default function PortfolioRender(props: Props) {
       <div className="flex gap-2">
         {props.portfolioFilters.filters.map((filter, index) => (<PortfolioFilterButton key={index} { ...props.portfolioFilters } index={index} />))}
       </div>
-      <div className="grid grid-cols-2 gap-6 mt-6">{props.portfolios.map((filter, index) => (<PortfolioAtom key={index} {...filter} />))}</div>
+      <div className="flex flex-col md:grid grid-cols-2 gap-6 mt-6">{props.portfolios.map((filter, index) => (<PortfolioAtom key={index} {...filter} />))}</div>
     </div>
   )
 }

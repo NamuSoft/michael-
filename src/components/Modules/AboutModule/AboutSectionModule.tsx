@@ -3,6 +3,7 @@ import React from "react";
 import CredentialAtom from "~/components/Atoms/CredentialAtom/CredentialAtom";
 import SectionHeadingTextAtom from "~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom";
 import SkillTagAtom from "~/components/Atoms/SkillTagAtom/SkillTagAtom";
+import SectionWrapper from "~/components/Components/SectionWrapper/SectionWrapper";
 import TypingText from "~/components/Components/TypingText/TypingText";
 
 type Props = {
@@ -14,9 +15,9 @@ type Props = {
 
 export default function AboutSectionModule(props: Props) {
   return (
-    <div className='col-span-3 h-fit rounded-lg md:rounded-2xl bg-white px-5 md:px-12 py-12 shadow-lg'>
-      <div className='relative md:flex w-full gap-12'>
-        <div className="relative">
+    <SectionWrapper id="about">
+      <div className='relative w-full gap-12 md:flex'>
+        <div className='relative'>
           <Image
             src='/images/hero-avatar.webp'
             alt='Hero Avatar'
@@ -29,11 +30,11 @@ export default function AboutSectionModule(props: Props) {
         </div>
         <div className='flex w-full flex-col gap-4'>
           <SectionHeadingTextAtom text={props.heading.text} />
-          <div className='text-[30px] md:text-[40px] font-bold'>
+          <div className='text-[30px] font-bold md:text-[40px]'>
             <h2>UI & UX Designer.</h2>
             <h2 className='-mt-2'>Photographer</h2>
           </div>
-          <div className='flex flex-wrap items-center md:justify-between gap-2'>
+          <div className='flex flex-wrap items-center gap-2 md:justify-between'>
             {props.skills.map((skill, index) => (
               <SkillTagAtom key={index} {...skill} />
             ))}
@@ -44,11 +45,11 @@ export default function AboutSectionModule(props: Props) {
           </p>
         </div>
       </div>
-      <div className='mt-4 md:mt-1 flex flex-col md:flex-row  md:items-center gap-6 md:gap-20'>
+      <div className='mt-4 flex flex-col gap-6 md:mt-1  md:flex-row md:items-center md:gap-20'>
         {props.credentials.map((credential, index) => (
           <CredentialAtom key={index} {...credential} />
         ))}
       </div>
-    </div>
+    </SectionWrapper>
   );
 }
