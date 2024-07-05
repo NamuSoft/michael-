@@ -8,8 +8,6 @@ type Props = {
   service: React.ComponentProps<typeof ServicesRender>;
 };
 
-// 39551
-
 export default function ServicesSectionModule(props: Props) {
   return (
     <SectionWrapper id='services'>

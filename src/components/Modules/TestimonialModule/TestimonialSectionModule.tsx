@@ -1,6 +1,7 @@
 import React from 'react'
 import NavigationButtonAtom from '~/components/Atoms/NavigationButton/NavigationButtonAtom';
 import SectionHeadingTextAtom from '~/components/Atoms/SectionHeadingTextAtom/SectionHeaderAtom'
+import SectionWrapper from '~/components/Components/SectionWrapper/SectionWrapper';
 import TestimonialRender from '~/components/Components/TestimonialRender/TestimonialRender';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 export default function TestimonialSectionModule(props: Props) {
   return (
-    <div className='col-span-3 rounded-2xl bg-white p-12 shadow'>
+    <SectionWrapper id='testimonial'>
       <div className='relative flex w-full gap-12'>
         <div className='flex w-full items-center justify-between'>
           <SectionHeadingTextAtom {...props.heading} />
@@ -29,7 +30,7 @@ export default function TestimonialSectionModule(props: Props) {
         </div>
       </div>
       <TestimonialRender {...props.testimonial} />
-    </div>
+    </SectionWrapper>
   );
 }
 // 00072
