@@ -9,8 +9,8 @@ type Props = {
 // TODO - Add scroll animation
 export default function TestimonialRender(props: Props) {
   return (
-    <div className='grid items-center md:grid-cols-2'>
-      <div className='hidden md:block'>
+    <div className=''>
+      <div className='md:grid hidden items-center grid-cols-2'>
         {props.testimonials
           .slice(props.currentTestimonial, props.currentTestimonial + 2)
           .map((testimonial, index) => (
